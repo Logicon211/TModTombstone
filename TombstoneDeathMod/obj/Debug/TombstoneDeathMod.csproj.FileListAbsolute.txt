@@ -1,0 +1,6 @@
+C:\Users\Logan\Documents\Visual Studio 2015\Projects\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.dll
+C:\Users\Logan\Documents\Visual Studio 2015\Projects\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.pdb
+C:\Users\Logan\Documents\Visual Studio 2015\Projects\TombstoneDeathMod\bin\Debug\Terraria.exe
+C:\Users\Logan\Documents\Visual Studio 2015\Projects\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.csprojResolveAssemblyReference.cache
+C:\Users\Logan\Documents\Visual Studio 2015\Projects\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.dll
+C:\Users\Logan\Documents\Visual Studio 2015\Projects\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.pdb
