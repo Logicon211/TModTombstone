@@ -11,6 +11,8 @@ namespace TombstoneDeathMod
         public override void Load()
         {
             AddPlayer("Tombstone Player", new TombstonePlayer());
+            AddGlobalTile("Global Tombstone", new GlobalTombstone());
+            AddGlobalProjectile("Tombstone Projectile", new TombstoneGlobalProjectile());
         }
     }
 }
