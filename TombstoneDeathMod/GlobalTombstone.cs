@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace TombstoneDeathMod
 
         public override void ModifyLight(int i, int j, int type, ref float r, ref float g, ref float b)
         {
+            //Makes the tombstones give off a bit of light
             if (type == TileID.Tombstones)
             {
                 r = 1f;
@@ -39,6 +41,9 @@ namespace TombstoneDeathMod
                 Player[] players = Main.player;
 
                 Player player = Main.player[Main.myPlayer];
+
+                Debug.WriteLine("Player ID: " + Main.myPlayer + " Tried to click on tombstone coordinates: " + i + ", " + j);
+                Debug.WriteLine("Player's Name was " + Main.player[Main.myPlayer].name);
 
                 //Don't need this as apparently we can get myMainPlayer here
                 /*Player closestPlayer = null;

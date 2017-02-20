@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,10 @@ namespace TombstoneDeathMod
 
         public override bool PreKill(Projectile projectile, int timeLeft)
         {
+            Debug.WriteLine("A Projectile Died");
             if (projectile.type == ProjectileID.Obelisk  || projectile.type == ProjectileID.GraveMarker || projectile.type == ProjectileID.Gravestone || projectile.type == ProjectileID.Tombstone || projectile.type == ProjectileID.Headstone || projectile.type == ProjectileID.CrossGraveMarker || projectile.type == ProjectileID.RichGravestone1 || projectile.type == ProjectileID.RichGravestone2 || projectile.type == ProjectileID.RichGravestone3 || projectile.type == ProjectileID.RichGravestone4 || projectile.type == ProjectileID.RichGravestone5)
             {
+                Debug.WriteLine("**A Tombstone Projectile Died");
                 string test = projectile.ToString();
                 GlobalTombstone gt = (GlobalTombstone)mod.GetGlobalTile("Global Tombstone");
 
@@ -28,6 +31,9 @@ namespace TombstoneDeathMod
                 int owner = projectile.owner;
 
                 Vector2 tombStonePosition = new Vector2((int) Math.Ceiling(projectile.position.X/16), (int) Math.Ceiling(projectile.position.Y/16));
+                
+                Debug.WriteLine("Player Died at " + tombStonePosition.ToString() + " player ID: " + projectile.owner);
+                Debug.WriteLine("Player's Name was " + Main.player[Main.myPlayer].name);
 
                 TombstonePlayer player = ((TombstonePlayer)Main.player[owner].GetModPlayer(mod, "Tombstone Player"));
                 PlayerDeathInventory playerDeathInventory = player.playerDeathInventory;

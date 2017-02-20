@@ -14,7 +14,7 @@ namespace TombstoneDeathMod
     {
         public PlayerDeathInventory playerDeathInventory = null;
 
-        public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref string deathText)
+        public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
         {
             //deathText = " was dissolved by holy powers";
 
@@ -68,9 +68,10 @@ namespace TombstoneDeathMod
             return true;
         }
 
-        public override void Kill(double damage, int hitDirection, bool pvp, string deathText)
+        public override void Kill(double damage, int hitDirection, bool pvp, PlayerDeathReason damageSource)
         {
-            deathText = " More god damned death text";
+            //Dunno what I can do here. I can't change death text anymore?
+            base.Kill(damage, hitDirection, pvp, damageSource);
         }
 
     }

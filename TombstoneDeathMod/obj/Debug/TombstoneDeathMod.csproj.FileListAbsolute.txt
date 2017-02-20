@@ -10,3 +10,15 @@ C:\Users\Logan\Desktop\TModTombstone\TModTombstone\TombstoneDeathMod\bin\Debug\T
 C:\Users\Logan\Desktop\TModTombstone\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.csprojResolveAssemblyReference.cache
 C:\Users\Logan\Desktop\TModTombstone\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.dll
 C:\Users\Logan\Desktop\TModTombstone\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.pdb
+C:\Users\Logan\Desktop\Development\TModTombstone\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.csprojResolveAssemblyReference.cache
+C:\Users\Logan\Desktop\Development\TModTombstone\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.dll
+C:\Users\Logan\Desktop\Development\TModTombstone\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.pdb
+C:\Users\Logan\Desktop\Development\TModTombstone\TModTombstone\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.dll
+C:\Users\Logan\Desktop\Development\TModTombstone\TModTombstone\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.pdb
+C:\Users\Logan\Desktop\Development\TModTombstone\TModTombstone\TombstoneDeathMod\bin\Debug\Terraria.exe
+C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.dll
+C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.pdb
+C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\bin\Debug\Terraria.exe
+C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.csprojResolveAssemblyReference.cache
+C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.dll
+C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.pdb
