@@ -12,7 +12,7 @@ namespace TombstoneDeathMod
 {
     public class TombstonePlayer : ModPlayer
     {
-        public PlayerDeathInventory playerDeathInventory = null;
+        //public PlayerDeathInventory playerDeathInventory = null;
 
         public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
         {
@@ -64,7 +64,92 @@ namespace TombstoneDeathMod
                 player.miscDyes[i] = new Item();
             }
 
-            playerDeathInventory = new PlayerDeathInventory(deathInventory, deathArmor, deathDye, deathMiscEquips, deathMiscDyes);
+            PlayerDeathInventory playerDeathInventory = new PlayerDeathInventory(deathInventory, deathArmor, deathDye, deathMiscEquips, deathMiscDyes);
+
+            
+            int x = (int)((player.position.X) / 16f);
+            int y = (int)((player.position.Y) / 16f) + 2;
+
+
+            WorldGen.KillTile(x, y);
+            WorldGen.KillTile(x, y+1);
+            WorldGen.KillTile(x, y-1);
+            WorldGen.KillTile(x+1, y);
+            WorldGen.KillTile(x+1, y+1);
+            WorldGen.KillTile(x+1, y-1);
+            //WorldGen.KillTile(x-1, y);
+            //WorldGen.KillTile(x-1, y+1);
+            //WorldGen.KillTile(x-1, y-1);
+
+            //TODO: Check for tile empty after killing the tiles to make sure there's space for the thing? Move it upwards if not?
+            WorldGen.TileEmpty(x, y);
+
+            Main.tile[x, y + 1].active(true);
+            Main.tile[x + 1, y + 1].active(true);
+           // Main.tile[x - 1, y + 1].active(true);
+            
+            WorldGen.PlaceTile(x, y, TileID.Tombstones, false, true, 1, 7);
+
+            int sign = Sign.ReadSign(x, y, true);
+            if (sign >= 0)
+            {
+                Sign.TextSign(sign, player.name + "'s Stuff");
+            }
+
+            Vector2 tombStonePosition = new Vector2(x, y);
+
+            //Debug.WriteLine("Player Died at " + tombStonePosition.ToString() + " player ID: " + projectile.owner);
+            //Debug.WriteLine("Player's Name was " + Main.player[Main.myPlayer].name);
+
+            TombstonePlayer tStonePlayer = ((TombstonePlayer) player.GetModPlayer(mod, "Tombstone Player"));
+
+            Dictionary<string, PlayerDeathInventory> playerDeathInventoryMap = ((GlobalTombstone)mod.GetGlobalTile("Global Tombstone")).playerDeathInventoryMap;
+
+            if (playerDeathInventoryMap.ContainsKey(player.name + "," + tombStonePosition.ToString()))
+            {
+                //remove inventory if one for some reason exists already for that player there Could only happen if a tombstone was removed there)
+                playerDeathInventoryMap.Remove(player.name + "," + tombStonePosition.ToString());
+            }
+            playerDeathInventoryMap.Add(player.name + "," + tombStonePosition.ToString(), playerDeathInventory);
+
+            //clear playerDeathInventory (Might be a bad idea?)
+            //tStonePlayer.playerDeathInventory = null;
+
+            //*********************************************************************************
+
+            //TODO: Figure out what the hell to do with Chests not being destroyable
+
+            
+            /* Main.tile[x, y].ClearEverything();
+             Main.tile[x, y+1].ClearEverything();
+             Main.tile[x, y-1].ClearEverything();
+             Main.tile[x+1, y].ClearEverything();
+             Main.tile[x+1, y+1].ClearEverything();
+             Main.tile[x+1, y-1].ClearEverything();
+             Main.tile[x-1, y].ClearEverything();
+             Main.tile[x-1, y+1].ClearEverything();
+             Main.tile[x-1, y-1].ClearEverything();*/
+
+
+            /* WorldGen.PoundTile(x, y);
+             WorldGen.PoundTile(x, y+1);
+             WorldGen.PoundTile(x, y-1);
+             WorldGen.PoundTile(x+1, y);
+             WorldGen.PoundTile(x+1, y+1);
+             WorldGen.PoundTile(x+1, y-1);
+             WorldGen.PoundTile(x-1, y);
+             WorldGen.PoundTile(x-1, y+1);
+             WorldGen.PoundTile(x-1, y-1);
+             WorldGen.TileEmpty(x, y);
+             WorldGen.TileEmpty(x, y + 1);
+             WorldGen.TileEmpty(x, y - 1);
+             WorldGen.TileEmpty(x + 1, y);
+             WorldGen.TileEmpty(x + 1, y + 1);
+             WorldGen.TileEmpty(x + 1, y - 1);
+             WorldGen.TileEmpty(x - 1, y);
+             WorldGen.TileEmpty(x - 1, y + 1);
+             WorldGen.TileEmpty(x - 1, y - 1);
+             Main.*/
             return true;
         }
 
