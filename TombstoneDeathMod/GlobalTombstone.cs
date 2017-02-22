@@ -133,7 +133,9 @@ namespace TombstoneDeathMod
 
                         //delete existing player inventory at that spot
                         playerDeathInventoryMap.Remove(playerName + "," + tombStonePositions[pos].ToString());
+                        WorldGen.KillTile((int)tombStonePositions[pos].X, (int)tombStonePositions[pos].Y);
                         break;
+
                     }
                     else
                     {

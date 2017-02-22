@@ -66,23 +66,30 @@ namespace TombstoneDeathMod
 
             PlayerDeathInventory playerDeathInventory = new PlayerDeathInventory(deathInventory, deathArmor, deathDye, deathMiscEquips, deathMiscDyes);
 
-            
+
             int x = (int)((player.position.X) / 16f);
             int y = (int)((player.position.Y) / 16f) + 2;
 
+            bool isClearForTombstone = WorldGen.TileEmpty(x, y) && WorldGen.TileEmpty(x, y + 1) && WorldGen.TileEmpty(x, y - 1) && WorldGen.TileEmpty(x + 1, y - 1) && WorldGen.TileEmpty(x + 1, y - 1) && WorldGen.TileEmpty(x + 1, y - 1);
 
-            WorldGen.KillTile(x, y);
-            WorldGen.KillTile(x, y+1);
-            WorldGen.KillTile(x, y-1);
-            WorldGen.KillTile(x+1, y);
-            WorldGen.KillTile(x+1, y+1);
-            WorldGen.KillTile(x+1, y-1);
-            //WorldGen.KillTile(x-1, y);
-            //WorldGen.KillTile(x-1, y+1);
-            //WorldGen.KillTile(x-1, y-1);
+            while (!isClearForTombstone) { 
+                WorldGen.KillTile(x, y);
+                WorldGen.KillTile(x, y + 1);
+                WorldGen.KillTile(x, y - 1);
+                WorldGen.KillTile(x + 1, y);
+                WorldGen.KillTile(x + 1, y + 1);
+                WorldGen.KillTile(x + 1, y - 1);
+                //WorldGen.KillTile(x-1, y);
+                //WorldGen.KillTile(x-1, y+1);
+                //WorldGen.KillTile(x-1, y-1);
 
-            //TODO: Check for tile empty after killing the tiles to make sure there's space for the thing? Move it upwards if not?
-            WorldGen.TileEmpty(x, y);
+                //TODO: Check for tile empty after killing the tiles to make sure there's space for the thing? Move it upwards if not?
+               isClearForTombstone = WorldGen.TileEmpty(x, y) && WorldGen.TileEmpty(x, y+1) && WorldGen.TileEmpty(x, y-1) && WorldGen.TileEmpty(x+1, y-1) && WorldGen.TileEmpty(x+1, y-1) && WorldGen.TileEmpty(x+1, y-1);
+               if(!isClearForTombstone)
+               {
+                    y--;
+               }
+            }
 
             Main.tile[x, y + 1].active(true);
             Main.tile[x + 1, y + 1].active(true);
