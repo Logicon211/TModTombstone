@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TombstoneDeathMod</RootNamespace>
     <AssemblyName>TombstoneDeathMod</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,7 +49,6 @@
   <ItemGroup>
     <Compile Include="GlobalTombstone.cs" />
     <Compile Include="PlayerDeathInventory.cs" />
-    <Compile Include="Tiles\TombstoneChest.cs" />
     <Compile Include="TombstoneDeathMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TombstoneGlobalProjectile.cs" />
@@ -56,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="build.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

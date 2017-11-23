@@ -10,8 +10,10 @@ namespace TombstoneDeathMod
     {
         public override void Load()
         {
-            AddPlayer("Tombstone Player", new TombstonePlayer());
-            AddGlobalTile("Global Tombstone", new GlobalTombstone());
+            //Tmodloader has been updated so that I probably don't need to do the below anymore (In fact it probably breaks stuff)
+
+            //AddPlayer("Tombstone Player", new TombstonePlayer());
+            //AddGlobalTile("Global Tombstone", new GlobalTombstone());
             //AddGlobalProjectile("Tombstone Projectile", new TombstoneGlobalProjectile());
         }
     }

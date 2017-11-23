@@ -22,3 +22,10 @@ C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathM
 C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.csprojResolveAssemblyReference.cache
 C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.dll
 C:\Users\Logan\Documents\My Games\Terraria\ModLoader\Mod Sources\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.pdb
+D:\TombstonePlayerTerrariaMod\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.dll
+D:\TombstonePlayerTerrariaMod\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.pdb
+D:\TombstonePlayerTerrariaMod\TModTombstone\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.dll
+D:\TombstonePlayerTerrariaMod\TModTombstone\TombstoneDeathMod\bin\Debug\TombstoneDeathMod.pdb
+D:\TombstonePlayerTerrariaMod\TModTombstone\TombstoneDeathMod\bin\Debug\Terraria.exe
+D:\TombstonePlayerTerrariaMod\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.csprojResolveAssemblyReference.cache
+D:\TombstonePlayerTerrariaMod\TModTombstone\TombstoneDeathMod\obj\Debug\TombstoneDeathMod.csproj.CoreCompileInputs.cache

@@ -14,7 +14,7 @@ namespace TombstoneDeathMod
 {
     public class GlobalTombstone : GlobalTile
     {
-        public Dictionary<string, PlayerDeathInventory> playerDeathInventoryMap = new Dictionary<string, PlayerDeathInventory>();
+        public static Dictionary<string, PlayerDeathInventory> playerDeathInventoryMap = new Dictionary<string, PlayerDeathInventory>();
 
         public override void SetDefaults()
         {
