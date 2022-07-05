@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eb59WazgHuOWJ6DEM4AOt9AsrCpW8+bd55IlXwTwD8GC5oagdJ7KMN+ezoxLM4xYkSu5wp+TClXrZGOASTu3ww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\darka\\OneDrive\\Desktop\\Terraria Mod\\Mymod\\TombstoneDeathMod\\TombstoneDeathMod2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\darka\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
