@@ -367,7 +367,7 @@ namespace TombstoneDeathMod2
             }
         }
 
-        public override void OnEnterWorld()
+        public override void OnEnterWorld(Player player)
         {
             if (playerDeathInventoryMap.Count > 0)
             {

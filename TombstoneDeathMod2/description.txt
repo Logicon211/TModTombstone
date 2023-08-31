@@ -1,15 +1,20 @@
 Improved Tombstone Death Mod
 
-Saves player inventory on death in a golden tombstone near where the player died. The player that died can retreive his inventory by right clicking his tombstone.
-Items are restored restored to the same slot you had them in, so no more fiddling around mid combat trying to equip armor again.
-May remove plants to fit the tombstone but never removes walls. If you die in the air 2 blocks of dirt will be placed to support a mid air tombstone.
-If it is not possible to place a tombstone your inventory drops on the ground as normal.
+** Recently updated to tmodloader 1.4.4 **
 
-On disconnect/save (the game saves pretty often) your not picked up tombstone with the most valuable items is saved locally and can still be retrieved in the next game session.
-If the tombstone has been removed or you go to a different map, the in game coordinates of the saved tombstone is printed in chat.
-Place a tombstone close to those coordinates (max 3 block distance) and right click it to restore your inventory.
+** Thanks to exuvo for making most of the big improvements to this mod, I came up with the initial code but exuvo took it and heavily improved the edge cases. I have only taken their branch and updated it to work with tmodloader 1.4.4 so I can get to using it again.
+
+Do you like the challenge of a mediumcore character but hate the hassle of reorganizing your inventory every time you retrieve your corpse? Well this mod is for you!
+
+Features:
+
+- Saves player inventory on death in a golden tombstone near where the player died. The player that died can retreive his inventory by right clicking his tombstone.
+- Items are restored to the same slot you had them in, so no more fiddling around mid combat trying to equip armor again.
+- May remove plants to fit the tombstone but never removes walls. If you die in the air 2 blocks of dirt will be placed to support a mid air tombstone.
+- If it is not possible to place a tombstone your inventory drops on the ground as normal.
+
+- On disconnect/save (the game saves pretty often) your not picked up tombstone with the most valuable items is saved locally and can still be retrieved in the next game session.
+- If the tombstone has been removed or you go to a different map, the in game coordinates of the saved tombstone is printed in chat. Place a tombstone close to those coordinates (max 3 block distance) and right click it to restore your inventory.
 
 There is 1 bug that I am unable to fix and that is that a tombstone is still created even if you have an item that prevents death.
 Workaround is to quickly right click the tombstone but you really need to quickly realise that you had a prevented death which can be difficult during combat.
-
-Thanks to original author Logicon for the idea and base code.
