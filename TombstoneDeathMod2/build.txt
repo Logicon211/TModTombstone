@@ -1,6 +1,6 @@
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
 includePDB = true
-version = 1.1.4
+version = 1.2.1
 author = Logicon and exuvo
 displayName = Improved Tombstone Death Mod
 hideCode = false

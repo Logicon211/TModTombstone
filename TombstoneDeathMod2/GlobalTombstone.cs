@@ -19,6 +19,7 @@ namespace TombstoneDeathMod2
         public override void SetStaticDefaults()
         {
             Main.tileLighted[TileID.Tombstones] = true;
+            TileID.Sets.PreventsTileRemovalIfOnTopOfIt[TileID.Tombstones] = true;
         }
 
         public override void ModifyLight(int i, int j, int type, ref float r, ref float g, ref float b)
@@ -121,6 +122,41 @@ namespace TombstoneDeathMod2
                 }
             }
         }
+
+        // Uncomment this if I want to disable the ability to destroy tiles while an inventory sits on it
+        // public override bool CanKillTile(int i, int j, int type, ref bool blockDamaged) {
+
+
+        //     if (type == TileID.Tombstones) {
+        //         Player player = Main.player[Main.myPlayer];
+        //         TombstonePlayer tStonePlayer = player.GetModPlayer<TombstonePlayer>();
+        //         Dictionary<Point, PlayerDeathInventory> playerDeathInventoryMap = tStonePlayer.playerDeathInventoryMap;
+        //         PlayerDeathInventory playerDeathInventory = null;
+
+        //         Point[] tombStonePositions = new Point[9];
+        //         tombStonePositions[0] = new Point(i, j);
+        //         tombStonePositions[1] = new Point(i, j+1);
+        //         tombStonePositions[2] = new Point(i, j-1);
+        //         tombStonePositions[3] = new Point(i+1, j);
+        //         tombStonePositions[4] = new Point(i+1, j+1);
+        //         tombStonePositions[5] = new Point(i+1, j-1);
+        //         tombStonePositions[6] = new Point(i-1, j);
+        //         tombStonePositions[7] = new Point(i-1, j+1);
+        //         tombStonePositions[8] = new Point(i-1, j-1);
+
+        //         for(int pos = 0; pos < tombStonePositions.Length; pos++) {
+        //             if (playerDeathInventoryMap.TryGetValue(tombStonePositions[pos], out playerDeathInventory))
+        //             {
+        //                 //found the player's death inventory, Block the destruction of this tile
+        //                 return false;
+                        
+        //                 break;
+        //             }
+        //         }
+
+        //     }
+        //     return true;
+        // }
 
         public void Send(int toWho, int fromWho, int x, int y)
         {

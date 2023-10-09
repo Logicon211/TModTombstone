@@ -12,6 +12,7 @@ Features:
 - Items are restored to the same slot you had them in, so no more fiddling around mid combat trying to equip armor again.
 - May remove plants to fit the tombstone but never removes walls. If you die in the air 2 blocks of dirt will be placed to support a mid air tombstone.
 - If it is not possible to place a tombstone your inventory drops on the ground as normal.
+- Prevents the tombstones block's from being destroyed while a tombstone sits on top, which should prevent accidental destruction by bombs or misclicks
 
 - On disconnect/save (the game saves pretty often) your not picked up tombstone with the most valuable items is saved locally and can still be retrieved in the next game session.
 - If the tombstone has been removed or you go to a different map, the in game coordinates of the saved tombstone is printed in chat. Place a tombstone close to those coordinates (max 3 block distance) and right click it to restore your inventory.
